@@ -2,21 +2,28 @@
 cask "devbox" do
   binary "devbox", target: "dbx"
 
-  version "0.1.0"
+  # Gatekeeper refuses a quarantined binary that is not notarized.
+  on_macos do
+    postflight_steps do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}"]
+    end
+  end
+
+  version "0.1.1"
 
   on_macos do
     on_arm do
-      sha256 "d962a6b0f0d418f941869501c882800ee453fc6528890735cc98d48400f78527"
+      sha256 "cd4972d4a841cfd21484f88b2e0385ba7712bbf2641ef8a31154339a610b1af3"
       url "https://github.com/richardamare/devbox/releases/download/v#{version}/devbox_darwin_arm64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "13ada586fec625c66d060b0a627e34ba5e40cf906f2fc29e38c0f91f22ae172e"
+      sha256 "c52160f5cfd263afe53b7e6d311adf2726d7d60824a1f05bb7b84bb3cbb0683a"
       url "https://github.com/richardamare/devbox/releases/download/v#{version}/devbox_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "b5a24c09d77983e9a8e1e9c791afc0871898173056b8a71d5b643e463b8ffbdd"
+      sha256 "45bcd7194c299678409f1800c05d84c9751a8d882f2904339eae284188d93c47"
       url "https://github.com/richardamare/devbox/releases/download/v#{version}/devbox_linux_amd64.tar.gz"
     end
   end
