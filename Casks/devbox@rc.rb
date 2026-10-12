@@ -9,21 +9,21 @@ cask "devbox@rc" do
     end
   end
 
-  version "0.2.0-rc.1"
+  version "0.2.0-rc.2"
 
   on_macos do
     on_arm do
-      sha256 "8d81120b1ddf3594ca74c048fd5fe8b7c498b6ec1822863321cb009beca0480e"
+      sha256 "eab69edfe3cf482607b55defd6880b54bac443af307916716e27fe0446626454"
       url "https://github.com/richardamare/devbox/releases/download/v#{version}/devbox_darwin_arm64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "729d6b8a4bb8f3cf8a7ecefe96c9b8821d092546a86e6241761b83b14f2ff3d9"
+      sha256 "2c3393ae3b104cdfa1f65e2a7b5e7d57be6623a478c3c76e1763f1857f9b4e35"
       url "https://github.com/richardamare/devbox/releases/download/v#{version}/devbox_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "a2ecb30729122fe033aac16e712b4931ee32ae593871b15099ca45e48754e260"
+      sha256 "60b9597e50dfabfecfa080a861854582ce43059195b60d1329eced9e7e978999"
       url "https://github.com/richardamare/devbox/releases/download/v#{version}/devbox_linux_amd64.tar.gz"
     end
   end
