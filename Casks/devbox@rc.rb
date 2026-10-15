@@ -9,21 +9,21 @@ cask "devbox@rc" do
     end
   end
 
-  version "0.2.0-rc.2"
+  version "0.2.0-rc.3"
 
   on_macos do
     on_arm do
-      sha256 "eab69edfe3cf482607b55defd6880b54bac443af307916716e27fe0446626454"
+      sha256 "a7c03482760fab85a657a3d5805b4729ccbea5ac85ca8182b9735787f7a51f1a"
       url "https://github.com/richardamare/devbox/releases/download/v#{version}/devbox_darwin_arm64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "2c3393ae3b104cdfa1f65e2a7b5e7d57be6623a478c3c76e1763f1857f9b4e35"
+      sha256 "a133bc5efa563c882160be6a2cd0117d1219f2f6ae108442d55da47512ccccb0"
       url "https://github.com/richardamare/devbox/releases/download/v#{version}/devbox_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "60b9597e50dfabfecfa080a861854582ce43059195b60d1329eced9e7e978999"
+      sha256 "12caac820aff38b1a3eadc55b5840963465959e09d1ff5cc824df7f435037789"
       url "https://github.com/richardamare/devbox/releases/download/v#{version}/devbox_linux_amd64.tar.gz"
     end
   end
@@ -138,6 +138,8 @@ cask "devbox@rc" do
   manpage "man/devbox-target-ls.1"
   manpage "man/devbox-target-rm.1"
   manpage "man/devbox-target.1"
+  manpage "man/devbox-teleport-claude.1"
+  manpage "man/devbox-teleport-t3.1"
   manpage "man/devbox-teleport.1"
   manpage "man/devbox-toolkit-link.1"
   manpage "man/devbox-toolkit-status.1"
